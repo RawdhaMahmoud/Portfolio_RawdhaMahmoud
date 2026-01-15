@@ -1,17 +1,17 @@
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
+    <section id="contact" className="py-20 bg-gray-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl font-bold text-center mb-12 text-white">
           Get In Touch
         </h2>
         <div className="max-w-2xl mx-auto">
-          <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
+          <div className="bg-gray-800 p-8 rounded-lg border border-gray-700">
             <form className="space-y-6">
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  className="block text-sm font-medium text-gray-300 mb-2"
                 >
                   Name
                 </label>
@@ -19,14 +19,14 @@ export default function Contact() {
                   type="text"
                   id="name"
                   name="name"
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent dark:bg-gray-600 dark:text-white"
+                  className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all"
                   required
                 />
               </div>
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  className="block text-sm font-medium text-gray-300 mb-2"
                 >
                   Email
                 </label>
@@ -34,14 +34,14 @@ export default function Contact() {
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent dark:bg-gray-600 dark:text-white"
+                  className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all"
                   required
                 />
               </div>
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  className="block text-sm font-medium text-gray-300 mb-2"
                 >
                   Message
                 </label>
@@ -49,24 +49,24 @@ export default function Contact() {
                   id="message"
                   name="message"
                   rows={5}
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent dark:bg-gray-600 dark:text-white"
+                  className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all resize-none"
                   required
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+                className="w-full px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium"
               >
                 Send Message
               </button>
             </form>
           </div>
           <div className="mt-8 text-center">
-            <p className="text-gray-700 dark:text-gray-300">
-              Or reach out via{" "}
+            <p className="text-gray-300">
+              Or email me at{" "}
               <a
                 href="mailto:rawdha@example.com"
-                className="text-indigo-600 dark:text-indigo-400 hover:underline"
+                className="text-indigo-400 hover:text-indigo-300 transition-colors"
               >
                 rawdha@example.com
               </a>

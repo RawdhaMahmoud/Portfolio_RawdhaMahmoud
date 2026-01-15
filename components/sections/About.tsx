@@ -1,19 +1,44 @@
+import Image from "next/image";
+
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-white dark:bg-gray-900">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
-          About Me
-        </h2>
-        <div className="max-w-3xl mx-auto">
-          <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-            Hello! I&apos;m Rawdha Mahmoud, a passionate full-stack developer with a love for creating
-            beautiful and functional web applications. I specialize in modern web technologies
-            and enjoy bringing ideas to life through code.
-          </p>
-          <p className="text-lg text-gray-700 dark:text-gray-300">
-            When I&apos;m not coding, you can find me exploring new technologies, contributing to
-            open-source projects, or sharing my knowledge with the developer community.
+    <section
+      id="about"
+      className="min-h-screen flex flex-row items-center justify-center bg-linear-to-br from-gray-900 via-blue-900 to-gray-900 px-4 sm:px-6 lg:px-8"
+    >
+      <div className="flex flex-row w-auto mx-auto text-center">
+        {/* Image de rawdha */}
+        <div className="order-2 flex-0.5 mb-8">
+          <Image
+            src="/image_logo/Rawdha_Mahmoud.png"
+            alt="Rawdha Mahmoud"
+            width={250}
+            height={250}
+            className="rounded-full mx-auto border-4 border-blue-500 shadow-2xl shadow-blue-500/50"
+            priority
+          />
+        </div>
+
+        {/* description */}
+        <div className="order-1 flex-1 space-y-6 w-full px-4 text-center md:text-left">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
+            Rawdha Mahmoud
+          </h1>
+          <div className="flex justify-center items-center mb-4">
+            <Image
+              src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&width=435&lines=Technicien+Informatique;+d%C3%A9veloppeuse+web"
+              alt="Typing SVG"
+              width={435}
+              height={50}
+              unoptimized
+            />
+          </div>
+          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto md:mx-0">
+            Je suis étudiante en deuxième année de classe préparatoire intégrée
+            en informatique au CESI. Passionnée par le développement logiciel,
+            les réseaux et les technologies émergentes, j&apos;aime analyser des
+            problématiques complexes et créer des solutions efficaces et
+            maintenables.
           </p>
         </div>
       </div>
