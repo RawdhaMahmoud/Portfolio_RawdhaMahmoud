@@ -26,7 +26,7 @@ export default function About() {
           </h1>
           <div className="flex justify-center items-center mb-4">
             <Image
-              src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&width=435&lines=Technicien+Informatique;+d%C3%A9veloppeuse+web"
+              src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&width=435&lines=Technicienne+Informatique;+d%C3%A9veloppeuse+web"
               alt="Typing SVG"
               width={435}
               height={50}
