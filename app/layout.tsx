@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="antialiased min-h-screen space-y-20 flex flex-col">
+      <body className="font-sans antialiased min-h-screen space-y-20 flex flex-col bg-background bg-fixed">
         <Header />
         <main className="flex flex-col">{children}</main>
         <Footer />

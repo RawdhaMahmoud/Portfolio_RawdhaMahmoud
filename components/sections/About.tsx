@@ -1,45 +1,52 @@
 import Image from "next/image";
+import SocialIcons from "../ui/SocialIcon";
 
 export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-row items-center justify-center bg-linear-to-br from-[#212121] via-[#2d2d2d] to-[#212121] px-4 sm:px-6 lg:px-8 py-32 pt-32"
+      className="min-h-screen flex items-center justify-center py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8"
     >
-      <div className="flex flex-row w-auto mx-auto text-center">
-        {/* Image de rawdha */}
-        <div className="order-2 flex-0.5 mb-8">
-          <Image
-            src="/image_logo/Rawdha_Mahmoud.jpeg"
-            alt="Rawdha Mahmoud"
-            width={250}
-            height={250}
-            className="rounded-full mx-auto border-4 border-[#2d2d2d] shadow-2xl shadow-[#2d2d2d]/50"
-            priority
-          />
-        </div>
-
-        {/* description */}
-        <div className="order-1 flex-1 space-y-6 w-full px-4 text-center md:text-left">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
-            Rawdha Mahmoud
-          </h1>
-          <div className="flex justify-center items-center mb-4">
+      <div className="max-w-6xl mx-auto w-full">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
+          {/* Image de rawdha */}
+          <div className="lg:order-2 flex-shrink-0">
             <Image
-              src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&width=435&lines=Technicienne+Informatique;+d%C3%A9veloppeuse+web"
-              alt="Typing SVG"
-              width={435}
-              height={50}
-              unoptimized
+              src="/image_logo/Rawdha_Mahmoud.jpeg"
+              alt="Rawdha Mahmoud"
+              width={500}
+              height={500}
+              className="rounded-full object-cover"
+              priority
             />
           </div>
-          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto md:mx-0">
-            Je suis étudiante en deuxième année de classe préparatoire intégrée
-            en informatique au CESI. Passionnée par le développement logiciel,
-            les réseaux et les technologies émergentes, j&apos;aime analyser des
-            problématiques complexes et créer des solutions efficaces et
-            maintenables.
-          </p>
+
+          {/* description */}
+          <div className="lg:order-1 flex-1 space-y-6 text-center lg:text-left">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
+              Rawdha Mahmoud
+            </h1>
+            <h2 className="flex  ml-20 justify-center  items-center">
+              <Image
+                src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&width=435&lines=Technicienne+Informatique;+d%C3%A9veloppeuse+web"
+                alt="Typing SVG"
+                width={435}
+                height={50}
+                unoptimized
+              />
+            </h2>
+            <div className="flex flex-col items-center justify-center gap-4 ">
+              <p className="text-lg sm:text-xl text-center text-gray-300 leading-relaxed max-w-2xl">
+                Je suis étudiante en deuxième année de classe préparatoire
+                intégrée en informatique au CESI. Passionnée par le
+                développement logiciel, les réseaux et les technologies
+                émergentes, j&apos;aime analyser des problématiques complexes et
+                créer des solutions efficaces et maintenables.
+              </p>
+
+              <SocialIcons />
+            </div>
+          </div>
         </div>
       </div>
     </section>
