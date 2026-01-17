@@ -4,17 +4,17 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-row items-center justify-center bg-linear-to-br from-gray-900 via-blue-900 to-gray-900 px-4 sm:px-6 lg:px-8"
+      className="min-h-screen flex flex-row items-center justify-center bg-linear-to-br from-[#212121] via-[#2d2d2d] to-[#212121] px-4 sm:px-6 lg:px-8 py-32 pt-32"
     >
       <div className="flex flex-row w-auto mx-auto text-center">
         {/* Image de rawdha */}
         <div className="order-2 flex-0.5 mb-8">
           <Image
-            src="/image_logo/Rawdha_Mahmoud.png"
+            src="/image_logo/Rawdha_Mahmoud.jpeg"
             alt="Rawdha Mahmoud"
             width={250}
             height={250}
-            className="rounded-full mx-auto border-4 border-blue-500 shadow-2xl shadow-blue-500/50"
+            className="rounded-full mx-auto border-4 border-[#2d2d2d] shadow-2xl shadow-[#2d2d2d]/50"
             priority
           />
         </div>

@@ -10,7 +10,7 @@ export default function Header() {
   
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gray-900/95 backdrop-blur-md shadow-lg border-b border-gray-800`}>
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#212121]/95 backdrop-blur-md shadow-lg border-b border-[#2d2d2d]`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Logo />
@@ -33,7 +33,7 @@ export default function Header() {
       
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-gray-900/95 backdrop-blur-md border-t border-gray-800">
+        <div className="md:hidden bg-[#212121]/95 backdrop-blur-md border-t border-[#2d2d2d]">
           <Navbar mobile onItemClick={() => setIsMobileMenuOpen(false)} />
         </div>
       )}
