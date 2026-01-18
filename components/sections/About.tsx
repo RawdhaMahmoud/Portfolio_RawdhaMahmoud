@@ -12,7 +12,7 @@ export default function About() {
           {/* Image de rawdha */}
           <div className="lg:order-2 flex-shrink-0">
             <Image
-              src="/image_logo/raw.jpeg"
+              src="/image_logo/Rawdha_Mahmoud.jpeg"
               alt="Rawdha Mahmoud"
               width={500}
               height={500}
