@@ -134,17 +134,4 @@ portfolio-rawdha-mahmoud/
 3. Create an email template
 4. Add credentials to `.env.local`
 
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 👤 Author
-
-**Rawdha Mahmoud**
-- IT Student
-- Portfolio: [Your Portfolio URL]
-- GitHub: [@yourusername](https://github.com/yourusername)
-
----
-
 Built with ❤️ using Next.js and Tailwind CSS
