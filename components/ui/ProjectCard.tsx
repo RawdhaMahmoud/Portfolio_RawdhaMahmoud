@@ -12,7 +12,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="bg-[#2d2d2d] text-white rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 p-6 sm:p-8 w-full">
+    <div className="bg-zinc-900 text-white rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 p-6 sm:p-8 w-full">
       <Image
         src={project.img}
         alt={project.title}

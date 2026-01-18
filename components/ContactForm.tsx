@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Send, Loader2 } from "lucide-react";
+import emailjs from "@emailjs/browser";
 import InputField from "./ui/InputField";
 import TextAreaField from "./ui/TextAreaField";
 
@@ -21,6 +22,7 @@ const ContactForm = () => {
     phone: "",
     message: "",
   });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (
@@ -34,43 +36,62 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          prenom: formData.firstName,
+          nom: formData.lastName,
+          email: formData.email,
+          telephone: formData.phone,
+          message: formData.message,
+          time: new Date().toLocaleString("fr-FR"),
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
 
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
-    setIsSubmitting(false);
+      alert("Message envoyé avec succès ✅");
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+      alert("Erreur lors de l'envoi ❌");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <div className="flex flex-col items-center justify-center  p-10  overflow-hidden bg-[#1e1e1e] border border-white/10 sm:p-8 rounded-lg shadow-lg">
+    <div className="flex flex-col items-center justify-center p-10 overflow-hidden bg-zinc-900 border border-white/10 sm:p-8 rounded-lg shadow-lg">
       <h3 className="text-xl sm:text-2xl font-semibold text-white mb-6 lg:mb-8">
         Envoyez-moi un message
       </h3>
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="flex  gap-4">
-        <InputField
-          label="Prénom"
-          name="firstName"
-          value={formData.firstName}
-          onChange={handleChange}
-          placeholder="John"
-          required
-        />
-        <InputField
-          label="Nom"
-          name="lastName"
-          value={formData.lastName}
-          onChange={handleChange}
-          placeholder="Doe"
-          required
-        />
+        <div className="flex gap-4">
+          <InputField
+            label="Prénom"
+            name="firstName"
+            value={formData.firstName}
+            onChange={handleChange}
+            placeholder="John"
+            required
+          />
+          <InputField
+            label="Nom"
+            name="lastName"
+            value={formData.lastName}
+            onChange={handleChange}
+            placeholder="Doe"
+            required
+          />
         </div>
 
         <InputField
@@ -101,11 +122,11 @@ const ContactForm = () => {
           placeholder="Décrivez votre projet ou posez-moi une question..."
           required
         />
-        {/* Submit Button */}
+
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-blue-400 bg-gradient-to-br from-primary to-secondary transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow-intense disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+          className="w-full flex items-center bg-blue-500 justify-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-gradient-to-br from-primary to-secondary transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow-intense disabled:opacity-60"
         >
           {isSubmitting ? (
             <>

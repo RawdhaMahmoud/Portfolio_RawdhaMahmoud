@@ -1,5 +1,5 @@
 import DownloadButton from "./DownloadButton";
-import { Home, Code, Folder, Mail } from "lucide-react";
+import { Home, UserCircle, Folder, Mail } from "lucide-react";
 
 interface NavbarProps {
   mobile?: boolean;
@@ -9,7 +9,7 @@ interface NavbarProps {
 export default function Navbar({ mobile, onItemClick }: NavbarProps) {
   const items = [
     { label: "Accueil", href: "about", icon: Home },
-    { label: "Compétences", href: "skills", icon: Code },
+    { label: "Profil", href: "profile", icon: UserCircle },
     { label: "Projets", href: "projects", icon: Folder },
     { label: "Contact", href: "contact", icon: Mail },
   ];
