@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Send, Loader2 } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 import InputField from "./ui/InputField";
 import TextAreaField from "./ui/TextAreaField";
 
@@ -36,6 +37,8 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    const loadingToast = toast.loading("Envoi en cours...");
+
     try {
       await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
@@ -51,7 +54,9 @@ const ContactForm = () => {
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
 
-      alert("Message envoyé avec succès ✅");
+      toast.success("Message envoyé avec succès ✅", {
+        id: loadingToast,
+      });
 
       setFormData({
         firstName: "",
@@ -62,7 +67,9 @@ const ContactForm = () => {
       });
     } catch (error) {
       console.error(error);
-      alert("Erreur lors de l'envoi ❌");
+      toast.error("Erreur lors de l'envoi. Veuillez réessayer ❌", {
+        id: loadingToast,
+      });
     } finally {
       setIsSubmitting(false);
     }
