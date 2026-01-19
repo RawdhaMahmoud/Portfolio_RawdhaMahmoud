@@ -8,7 +8,7 @@ export default function Profile() {
   const [activeTab, setActiveTab] = useState("education");
 
   const tabs = [
-    { id: "education", label: "Éducation" },
+    { id: "education", label: "Education" },
     { id: "certifications", label: "Certifications" },
     { id: "competences", label: "Compétences" },
   ];
@@ -16,7 +16,7 @@ export default function Profile() {
   return (
     <section id="profile" className="flex flex-col justify-center items-center mx-auto py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 border-t border-[#2d2d2d]">
       {/* Navigation Tabs */}
-      <nav className="flex flex-col lg:flex-row gap-3 lg:gap-8 border-b lg:justify-around text-base sm:text-lg lg:text-xl w-full max-w-2xl rounded-2xl border-2 mb-8 lg:mb-12 border-[#2d2d2d] px-4 sm:px-6">
+      <nav id="navbar" className="flex flex-col lg:flex-row gap-3 lg:gap-8 border-b lg:justify-around text-base sm:text-lg lg:text-xl w-full max-w-2xl rounded-2xl border-2 mb-8 lg:mb-12 border-[#2d2d2d] px-4 sm:px-6">
         {tabs.map((tab) => (
           <button
             key={tab.id}

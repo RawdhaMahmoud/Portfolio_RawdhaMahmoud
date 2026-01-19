@@ -3,7 +3,7 @@ import logo from "@/public/image_logo/logoRawdha.png";
 
 export default function Logo() {
   return (
-    <a href="#home" className="flex items-center gap-2 group">
+    <a href="#about" className="flex items-center gap-2 group">
       <div className="relative">
         <div className="absolute inset-0 bg-linear-to-r " />
         <Image

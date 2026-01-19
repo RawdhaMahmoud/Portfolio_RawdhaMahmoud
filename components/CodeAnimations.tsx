@@ -169,7 +169,7 @@ const CodeAnimations = () => {
       <div className="absolute -inset-1 rounded-3xl blur-xl" />
         <div className="h-auto rounded-xl flex flex-col justify-start overflow-hidden bg-zinc-900 border border-white/10">
          
-          <div className="flex items-center gap-2 px-6 py-4 bg-[#171717] border-b border-white/5">
+          <div className="flex items-center gap-2 px-3 sm:px-6 py-3 sm:py-4 bg-[#171717] border-b border-white/5">
             <div className="flex items-center gap-1.5">
               <div className="w-3 h-3 rounded-full bg-[#ff5f57]" />
               <div className="w-3 h-3 rounded-full bg-[#febc2e]" />
@@ -181,7 +181,7 @@ const CodeAnimations = () => {
           </div>
 
           {/* Code Content Area */}
-          <div className="px-6 py-5 space-y-1.5 font-mono text-sm sm:text-base leading-6">
+          <div className="px-3 sm:px-6 py-3 sm:py-5 space-y-1.5 font-mono text-sm sm:text-base leading-6">
             {codeLines
               .slice(0, visibleLines)
               .map((line, index) => renderLine(line, index))}

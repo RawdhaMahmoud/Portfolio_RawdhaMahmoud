@@ -18,9 +18,9 @@ function TimelineCard({
   description,
 }: TimelineCardProps) {
   const technologies = [
-    "Academic Excellence",
-    "Scientific Research",
-    "Critical Thinking",
+    "Excellence académique",
+    "Recherche scientifique",
+    "Pensée critique",
   ];
 
   return (

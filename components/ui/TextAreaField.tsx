@@ -33,7 +33,7 @@ export default function TextAreaField({
         rows={rows}
         placeholder={placeholder}
         required={required}
-        className="w-full px-4 py-3 rounded-xl bg-muted/50 border border-border text-foreground placeholder:text-[#EAEBD0] transition-all duration-300 focus:outline-none focus:border-primary/50 focus:shadow-glow resize-none"
+        className="w-full px-4 py-3 rounded-xl bg-muted/50 text-gray-500 border border-border text-foreground placeholder:text-[#EAEBD0] transition-all duration-300 focus:outline-none focus:border-primary/50 focus:shadow-glow resize-none"
       />
     </div>
   );

@@ -7,20 +7,7 @@ body {
   font-family: "Playfair Display", serif;
   background-color: #1e1e1e;
 }
-/* Custom Scrollbar */
-.font-mono::-webkit-scrollbar {
-  width: 6px;
-}
 
-.font-mono::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.font-mono::-webkit-scrollbar-thumb {
-  background: rgba(139, 92, 246, 0.3);
-  border-radius: 3px;
-}
-
-.font-mono::-webkit-scrollbar-thumb:hover {
-  background: rgba(139, 92, 246, 0.5);
+#navbar{
+  font-family: 'Poppins', sans-serif;
 }

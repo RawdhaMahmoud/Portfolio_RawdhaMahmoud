@@ -15,7 +15,7 @@ export default function Navbar({ mobile, onItemClick }: NavbarProps) {
   ];
 
   return (
-    <nav className={mobile ? "flex flex-col py-4" : "flex items-center gap-2"}>
+    <nav id="navbar" className={mobile ? "flex flex-col py-4" : "flex items-center gap-2 "} >
       {items.map((item) => {
         const Icon = item.icon;
 
